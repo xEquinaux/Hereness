@@ -1,0 +1,19 @@
+﻿<Window x:Class="Hereness.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hereness"
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="200" SizeToContent="WidthAndHeight" BorderBrush="CornflowerBlue">
+	<Grid>
+		<Rectangle HorizontalAlignment="Center" Height="284" Stroke="White" StrokeThickness="10" Fill="WhiteSmoke" VerticalAlignment="Center" Width="200"/>
+		<Label Content="Hereness" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="48" Foreground="#FF81A59C"/>
+		<TextBox x:Name="text_ip" LostFocus="text_ip_LostFocus" HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" Text="Localhost" VerticalAlignment="Top" Width="120" BorderBrush="#FFBB6DFF"/>
+		<TextBox x:Name="text_username" MaxHeight="18" HorizontalAlignment="Center" Margin="0,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="#FFBB6DFF"/>
+		<TextBox x:Name="text_pass" MaxLength="4" HorizontalAlignment="Center" Margin="0,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="#FFBB6DFF"/>
+		<Button x:Name="button_login" Click="button_login_Click" Content="Login" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Height="21" Width="90" Background="#FFD4D4D4"/>
+		<Label x:Name="label_status" Content="Status: offline" HorizontalAlignment="Center" Margin="0,209,0,0" VerticalAlignment="Top" Background="#FFFFFBE7" Foreground="#FF0DB7FF"/>
+
+	</Grid>
+</Window>
