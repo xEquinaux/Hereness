@@ -5,6 +5,10 @@ VisualStudioVersion = 17.10.34902.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hereness", "Hereness.csproj", "{6241213F-E041-49A2-8369-F3404D5EEEA8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cotf-revised_launcher", "..\cotf-revised\cotf-revised_launcher.csproj", "{14288AC7-D979-4BAE-87E4-CD2164A77B5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hereness-server", "..\Hereness-server\Hereness-server.csproj", "{999400FF-1505-48F5-911D-6F44EF16131A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{6241213F-E041-49A2-8369-F3404D5EEEA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6241213F-E041-49A2-8369-F3404D5EEEA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6241213F-E041-49A2-8369-F3404D5EEEA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14288AC7-D979-4BAE-87E4-CD2164A77B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14288AC7-D979-4BAE-87E4-CD2164A77B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14288AC7-D979-4BAE-87E4-CD2164A77B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14288AC7-D979-4BAE-87E4-CD2164A77B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999400FF-1505-48F5-911D-6F44EF16131A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999400FF-1505-48F5-911D-6F44EF16131A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999400FF-1505-48F5-911D-6F44EF16131A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999400FF-1505-48F5-911D-6F44EF16131A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,12 +9,5 @@ namespace Hereness
 	/// </summary>
 	public partial class App : Application
 	{
-		public App()
-		{
-			if (!new Login().ShowDialog().Value)
-			{
-				Application.Current.Shutdown(0);
-			}
-		}
 	}
 }
