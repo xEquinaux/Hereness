@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" SizeToContent="WidthAndHeight">
 	<Grid>
-		<RichTextBox x:Name="richtextbox" HorizontalAlignment="Left" VerticalAlignment="Top" Height="327" Width="400">
+		<RichTextBox x:Name="richtextbox" IsReadOnly="True" IsReadOnlyCaretVisible="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="327" Width="400">
 			<FlowDocument>
 				<Paragraph x:Name="text_chatlog">
 				</Paragraph>

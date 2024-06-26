@@ -24,6 +24,7 @@ namespace Hereness
 	{
 		public ChatClient client = new ChatClient();
 		public static UdpClient u;
+		public static string username;
 		public string host;
 		public bool connected = false;
 		public Login()
@@ -38,6 +39,7 @@ namespace Hereness
 				SendMessage(u, PacketId.Login, text_username.Text + " " + text_pass.Text);
 				if (Success(u))
 				{ 
+					username = text_username.Text;
 					Close();
 				}
 			}

@@ -21,23 +21,42 @@ namespace Hereness
 		{
 			new Login().ShowDialog();
 			InitializeComponent();
+			IngestMessages();
 		}
 
 		private void button_send_Click(object sender, RoutedEventArgs e)
 		{
-			Login.SendMessage(PacketId.Message, this.text_send.Text);
-			text_send.Clear();
-			DisplayMessage("default", "#000000", Login.GetMessage());
+			if (this.text_send.Text != string.Empty)
+			{
+				Login.SendMessage(PacketId.Message, Login.username + ":" + this.text_send.Text);
+				text_send.Clear();
+			}
 		}
+
+		public Task IngestMessages()
+		{
+			return Task.Factory.StartNew(() => 
+			{ 
+				while (true)
+				{ 
+					string message = Login.GetMessage();
+					DisplayMessage(message.Split(':')[0], "#000000", message.Split(':')[1]);
+				}
+			});
+		}
+
 		public void DisplayMessage(string Username, string UserColor, string Message)
 		{
-			Bold item = new Bold(new Run(Username))
-			{
-				Foreground = (Brush)new BrushConverter().ConvertFromString(UserColor)
-			};
-			text_chatlog.Inlines.Add(item);
-			text_chatlog.Inlines.Add(string.Format("{0} {1}{2}", new object[3] { ":", Message, "\n" }));
-			richtextbox.ScrollToEnd();
+			richtextbox.Dispatcher.Invoke(() => 
+			{ 
+				Bold item = new Bold(new Run(Username))
+				{
+					Foreground = (Brush)new BrushConverter().ConvertFromString(UserColor)
+				};
+				text_chatlog.Inlines.Add(item);
+				text_chatlog.Inlines.Add(string.Format("{0} {1}{2}", new object[3] { ":", Message, "\n" }));
+				richtextbox.ScrollToEnd();
+			});
 		}
 	}
 }
