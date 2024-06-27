@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hereness"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" SizeToContent="WidthAndHeight">
+        Title="Hereness" Height="450" Width="800" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
 	<Grid>
 		<RichTextBox x:Name="richtextbox" IsReadOnly="True" IsReadOnlyCaretVisible="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="327" Width="400">
 			<FlowDocument>
@@ -13,7 +13,7 @@
 				</Paragraph>
 			</FlowDocument>
 		</RichTextBox>
-		<TextBox x:Name="text_send"  HorizontalAlignment="Left" Margin="0,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" Height="43"/>
+		<TextBox x:Name="text_send" KeyDown="text_send_KeyDown" HorizontalAlignment="Left" Margin="0,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" Height="43"/>
 		<Button x:Name="button_send" Content="Send" HorizontalAlignment="Left" Margin="338,327,0,0" VerticalAlignment="Top" Height="43" Width="62" Click="button_send_Click"/>
 
 	</Grid>

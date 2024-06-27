@@ -58,5 +58,16 @@ namespace Hereness
 				richtextbox.ScrollToEnd();
 			});
 		}
+
+		private void text_send_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (!e.Handled && e.IsDown && !e.IsRepeat)
+			{
+				if (e.Key == Key.Enter)
+				{
+					button_send_Click(default, default);
+				}
+			}
+		}
 	}
 }
