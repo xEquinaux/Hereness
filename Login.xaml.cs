@@ -36,9 +36,9 @@ namespace Hereness
 		{
 			if (connected)
 			{
-				SendMessage(u, PacketId.Login, text_username.Text + " " + text_pass.Text);
-				if (Success(u))
-				{ 
+				SendMessage(u, PacketId.Login, text_username.Text + " " + text_pass.Password);
+				if (ChatClient.Retrieve(u, "SUCCESS"))
+				{
 					username = text_username.Text;
 					Close();
 				}
@@ -67,7 +67,7 @@ namespace Hereness
 			{
 				if (connected)
 				{
-					if (Success(u))
+					if (ChatClient.Retrieve(u, "SUCCESS"))
 					{
 						label_status.Content = "Status: connected";
 					}
@@ -103,13 +103,13 @@ namespace Hereness
 		/// <param name="message">Proper text message to send.</param>
 		public static void SendMessage(PacketId id, string message)
 		{
-			byte[] buffer = Packet.ConstructPacketData((int)id, message);
+			byte[] buffer = Packet.ConstructPacketData((int)id, message: message);
 			u.Send(buffer, buffer.Length);
 		}
 
 		public static void SendMessage(UdpClient client, PacketId id, string message)
 		{
-			byte[] buffer = Packet.ConstructPacketData((int)id, message);
+			byte[] buffer = Packet.ConstructPacketData((int)id, message: message);
 			client.Send(buffer, buffer.Length);
 		}
 
